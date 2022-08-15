@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed&display=swap" rel="stylesheet">
+    <title>Profile</title>
+</head>
+
+<body>
+    <div class="topBar">
+        <div class="header">
+            <a class="headerLink" id="headerProfile" href="#">Profile</a>
+            <a class="headerLink" href="#">Home</a>
+            <a class="headerLink" href="#">My Profile</a>
+            <a class="headerLink" href="#">Find Connections</a>
+        </div>
+        <button class="headerSignOut">Sign Out</button>
+    </div>
+    <div class="subHeader">
+        <div class="userInfo">
+            <div class="userTopInfo">
+                <div class="cyanBar">
+                    <div class="user">
+                        <img id="circle" src="./images/jane-m.jpg" alt="A circular profile picture of the user.">
+                        <h1 id="userName">Jane Doe</h1>
+                    </div>
+                </div>
+                <div class="location">
+                    <img id="marker" src="./icons/map-marker.png" alt="A marker used to show a location on a map.">
+                    <p id="userLocation">Seattle</p>
+                </div>
+                <div class="description fontFix">
+                    <p>Developer | Engineer | Problem Solver</p>
+                    <p>Master of Shadows and the Internet!</p>
+                </div>
+                <div class="edit fontFix">
+                    <img id="gear" src="./icons/gear.png" alt="A picture of a gear with six teeth.">
+                    <a class="blueLink" href="#" onclick="randomName('#userName')">edit profile</a>
+                </div>
+            </div>
+            <div class="education">
+                <div class="blackBar">
+                    <h2>Education</h2>
+                </div>
+                <p class="fontFix1 indent">Coding Dojo - Full Stack Bootcamp</p>
+                <p class="fontFix2 indent">Dec 2019 - Mar 2020</p>
+                <p class="fontFix indent">Triple black belt in Python, MERN, and C#...</p>
+            </div>
+        </div>
+
+        <div class="sidebar">
+            <div class="connectionRequests">
+                <div class="blackBar">
+                    <div class="numberMore">2</div>
+                    <h2>Connection Requests</h2>
+                </div>
+                    <div class="request" id="request1">
+                        <div class="requestUser">
+                            <img class="otherUser" src="./images/todd-s.jpg" alt="An image of a user.">
+                            <p class="fontFix indent">Todd E</p>
+                        </div>
+                        <div class="requestIcons">
+                            <img class="requestPic" onclick="approveRequest('#request1','.numberMore','#moreConnect')" src="./icons/accept-circle.png" alt="A grey circle with a white checkmark.">
+                            <img class="requestPic" onclick="denyRequest('#request1','.numberMore')" src="./icons/close-circle.png" alt="A grey circle with a white X.">
+                        </div>
+                    </div>
+                    <div class="request" id="request2">
+                        <div class="requestUser">
+                        <img class="otherUser" src="./images/phil-s.jpg" alt="An image of a user.">
+                        <p class="fontFix indent">Phil K</p>
+                        </div>
+                        <div class="requestIcons">
+                        <img class="requestPic" onclick="approveRequest('#request2','.numberMore','#moreConnect')" src="./icons/accept-circle.png" alt="A grey circle with a white checkmark.">
+                        <img class="requestPic" onclick="denyRequest('#request2','.numberMore')" src="./icons/close-circle.png" alt="A grey circle with a white X.">
+                        </div>
+                    </div>
+            </div>
+            <div class="yourConnections">
+                <div class="blackBar">
+                    <div class="numberMore" id="moreConnect">200</div>
+                    <h2>Your Connections</h2>
+                </div>
+                <div class="connectionExisting">
+                    <img class="otherUser" src="./images/adrien-s.jpg" alt="An image of a user.">
+                    <p class="fontFix indent">Adrien D</p>
+                </div>
+                <div class="connectionExisting">
+                    <img class="otherUser" src="./images/anne-s.jpg" alt="An image of a user.">
+                    <p class="fontFix indent">Anne J</p>
+                </div>
+                <div class="connectionExisting">
+                    <img class="otherUser" src="./images/alayne-s.jpg" alt="An image of a user.">
+                    <p class="fontFix indent">Alayne T</p>
+                </div>
+                <div class="connectionExisting">
+                    <img class="otherUser" src="./images/arry-s.jpg" alt="An image of a user.">
+                    <p class="fontFix indent">Arry Y</p>
+                </div>
+            </div>
+            <div class="viewMore">
+                <a class="blueLink fontFix" href="#">View more</a>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
